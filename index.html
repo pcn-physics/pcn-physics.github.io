@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Pamsters Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.png" rel="icon">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="aos.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons.css" rel="stylesheet">
+  <link href="boxicons.min.css" rel="stylesheet">
+  <link href="glightbox.min.css" rel="stylesheet">
+  <link href="swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      
+      <div class="profile">
+        <img src="me.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Pamela Nguyen</a></h1>
+        <div class="social-links mt-3 text-center">
+          
+          <a href="https://github.com/pcn-physics" class="github"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg></a>
+          <a href="https://www.linkedin.com/in/pam-nguyen/" class="linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+          </svg></a>
+        </div>
+      </div>
+
+      
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <box-icon type='solid' name='home-alt-2'></box-icon>
+          <li><a href="#hero" class="nav-link scrollto active"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABAUlEQVRIS+2V4Q2CMBBG6QaOoBvoCGwgG8gGOolsIBvIBrKBjsAIblC/z1BSKm2vQf7RhBDo8d613IHKFh5qYX4mFmitN0jmhoPnQin1liQnEljwYw9tIcj/KWDmJwcokkRXgOyvAJ892dZYSRlaSVAAOMEUhMYFksoX4BUI4YZbQlJPSSYFgPNlmoqRvEvGsLIaN/hHAPgeQY++HKVwE5dD0toPjQQz4eSyNyh5Gckg6Gv9iYltatpOPCUHSDretwV3XJtGmunIOgh2riBU76nCBoJiJLAJ2C6dSvzCMKJVxIBV4O0DM7FukWSL2NH8JqWMofajghRqLDb6R4sBYvMfuDtfGSmBF34AAAAASUVORK5CYII="/><span> Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABG0lEQVRIS8WUDQ3CMBCFVwfgABzgAHDAFAAOQAGgAAlIYA7AAXPAJMxBeS9pCS2lN+gaLrksY+R996+KzKYy6xedAFrrCQJZwmfwAbyGb5VSjRSgCID4AiInI+zrlYBUMUgUAHFGe4Ezg5C1+HEMCJ9BkwAsCQExi2YhATZQPgqAPTI4/JoB63/OmQF7cIOPsvSAomaKQlmwseukKbJRmz3Y4Z1Np9k94DNq4h5IAtL3/wHMkq0Q4dQ02V+2xpSq/npMIc5ac/4/bbBfGduTq//hrURGnFPDEf3W5sjGgTiADrdHArYADF//5AO6nAYJ4pwOH8DS8DykWIUsSivgA+5mYlIATpl8gE5RfkaNFIIZ9CEujmnfkOyn4gEJ1VwZsQp8oQAAAABJRU5ErkJggg=="/></iconify-icon><span> Whoami</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABv0lEQVRIS7WVzXHCMBCFtTI24xvpwFQQSoAKgA5CB6ECQgUkFYQOSCqADnAHcQm+geRYyq4HMwryDxpAN2zv+6S3bwWwBy94sD67K0BKOeBaRwAw9oJgRptvBVCRp9QQOB8zrXvnEwOk5um11gP8fX7Pg+AJQWktIDschh7nK80YFTqvRkB+PL4ygJWzqlFQC7iHOHG8brdw559F6GNPSfljemlsKkVPY+oD2kZeRw0nTBDQtwC/QkyQuDELUXSntP6gZ5yxxTU9oRq0aGQBlBAbFJicACnudonisXOzAd4xpvMmQIqgmQJIPK23NZbVOoS10063+2UDpNxSnkkcsx8rzveu4vh9ivb0aQYsQC5lEU063oVd1ycWYF1OcWWT8eUuy7IIraHdu640BxgFQRCXhZWTnAuxwA/eXNVxOM/NbQPQLDTl3GajNdz356X3tYDicnO0h3IPvj+9FLd6QA+MqyJpOwX6GyvGlmUkqyy1eoBJ+sQBeyn9LICcP+OH0em6TjDGMTbz2/f9pGrXJsgClPHUSs06Ybh2bvRFQRVgT/eNOY23QGyLhCgSxJXqQxhSH25arX+ZN6lj8cMBf7bOwhl8vf6+AAAAAElFTkSuQmCC"/> <span> Experiences</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAm0lEQVRIS2NkoDFgpLH5DPSz4P///wZA38wHYhBNCTgA1NzIyMgIohE+AFqwH8h3oMRkJL0PgBYoolvwHywABLgsATqCZDVww8jRjM0h6OZQZAHMMGSfDy0LaB5ENLdgNA4wgpicvEJRPqB5JI88C+4DvaxApeL6ArBQNkQvrkF1AajCodQSUEWzEGjBAhQLqORyDGPoVyfTygcASM3OGUy7YpgAAAAASUVORK5CYII="/><span> Projects</span></a></li>
+          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
+          <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Pamela Nguyen</h1>
+      <p>I'm a <span class="typed" data-typed-items="Researcher, Data Analyst, Developer, Photographer, little Funny"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>
+            This is a personal bootstrap website I coded to highlight my skills, interest and projects. Please contact me if you would like to connect. :)
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="me.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Data Analyst &amp; Researcher.</h3>
+            <p class="fst-italic">
+              My name is Pamela Nguyen and I have recently completed a Bachelor of Science in Computational Physics and Mathematics 
+              with a certificate in Elements of Computing and Scientific Computation & Data Sciences at the University of Texas at Austin. 
+              I am currently seeking internships and full time opportunities. 
+              My interests include: Data Analysis, Machine Learning, and Quantitative Research. Hook em'
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li> -->
+                  <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAsUlEQVRIS2NkoDFgpLH5DKMWEAzhwRNEHF4NCRxsDBs+bGj4QNDZSAqI8gHIcEYmxvlAfRfYWf47kmIJURYIBDQI/PzDuB9ogQGplhBlAcjH5FpCtAXkWkKSBeRYQqYFTMAI/x8Aio//f/4H/tjR8ABXyiLJAkg8EG84yFKiLSDHcKItINdwoi1AzmiEwhw9LogOIg6fxnqGP/8X4otQbBFNtAWklD/IakctIBhyQz+IAInicBnSOkh9AAAAAElFTkSuQmCC"/> <strong>Website:</strong> <span>pamhacks.com</span></li>
+                  <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAsUlEQVRIS2NkoDFgpLH5DKMWEAzhwRNEHF4NCRxsDBs+bGj4QNDZSAqI8gHIcEYmxvlAfRfYWf47kmIJURYIBDQI/PzDuB9ogQGplhBlAcjH5FpCtAXkWkKSBeRYQqYFTMAI/x8Aio//f/4H/tjR8ABXyiLJAkg8EG84yFKiLSDHcKItINdwoi1AzmiEwhw9LogOIg6fxnqGP/8X4otQbBFNtAWklD/IakctIBhyQz+IAInicBnSOkh9AAAAAElFTkSuQmCC"/> <strong>Phone:</strong> <span>+1 (254) 350-3406</span></li>
+                  <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAsUlEQVRIS2NkoDFgpLH5DKMWEAzhwRNEHF4NCRxsDBs+bGj4QNDZSAqI8gHIcEYmxvlAfRfYWf47kmIJURYIBDQI/PzDuB9ogQGplhBlAcjH5FpCtAXkWkKSBeRYQqYFTMAI/x8Aio//f/4H/tjR8ABXyiLJAkg8EG84yFKiLSDHcKItINdwoi1AzmiEwhw9LogOIg6fxnqGP/8X4otQbBFNtAWklD/IakctIBhyQz+IAInicBnSOkh9AAAAAElFTkSuQmCC"/> <strong>City:</strong> <span>Austin, TX</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li> -->
+                  <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAsUlEQVRIS2NkoDFgpLH5DKMWEAzhwRNEHF4NCRxsDBs+bGj4QNDZSAqI8gHIcEYmxvlAfRfYWf47kmIJURYIBDQI/PzDuB9ogQGplhBlAcjH5FpCtAXkWkKSBeRYQqYFTMAI/x8Aio//f/4H/tjR8ABXyiLJAkg8EG84yFKiLSDHcKItINdwoi1AzmiEwhw9LogOIg6fxnqGP/8X4otQbBFNtAWklD/IakctIBhyQz+IAInicBnSOkh9AAAAAElFTkSuQmCC"/> <strong>Degree:</strong> <span>Bachelor of Science</span></li>
+                  <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAsUlEQVRIS2NkoDFgpLH5DKMWEAzhwRNEHF4NCRxsDBs+bGj4QNDZSAqI8gHIcEYmxvlAfRfYWf47kmIJURYIBDQI/PzDuB9ogQGplhBlAcjH5FpCtAXkWkKSBeRYQqYFTMAI/x8Aio//f/4H/tjR8ABXyiLJAkg8EG84yFKiLSDHcKItINdwoi1AzmiEwhw9LogOIg6fxnqGP/8X4otQbBFNtAWklD/IakctIBhyQz+IAInicBnSOkh9AAAAAElFTkSuQmCC"/> <strong>Email:</strong> <span>cao.nn.p@gmail.com</span></li>
+                  <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAsUlEQVRIS2NkoDFgpLH5DKMWEAzhwRNEHF4NCRxsDBs+bGj4QNDZSAqI8gHIcEYmxvlAfRfYWf47kmIJURYIBDQI/PzDuB9ogQGplhBlAcjH5FpCtAXkWkKSBeRYQqYFTMAI/x8Aio//f/4H/tjR8ABXyiLJAkg8EG84yFKiLSDHcKItINdwoi1AzmiEwhw9LogOIg6fxnqGP/8X4otQbBFNtAWklD/IakctIBhyQz+IAInicBnSOkh9AAAAAElFTkSuQmCC"/> <strong>Looking for:</strong> <span>Full Time opportunities</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Fill this gap later *****
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Put Relevant Course Work</p>
+        </div>
+        <h5>
+          Programming Languages
+        </h5>
+        <ul>
+          <li> Python (NumPy, pandas, scikit-learn, matplotlib, PyTorch, SymPy, SciPy)</li>
+          <li>C++</li>
+          <li>Java</li>
+          <li>Fortran 90</li>
+        </ul>
+
+        <h5>
+          Tools and Platforms
+        </h5>
+        <ul>
+          <li>Jupyter Notebooks</li>
+          <li>Bash/Unix/Linux</li>
+          <li>MATLAB</li>
+          <li>LaTex</li>
+          <li>Google Cloud Platforms</li>
+          <li>Git</li>
+        </ul>
+
+        <h5>
+          Databases
+        </h5>
+        <ul>
+          <li>SQL</li>
+          <li>Postgres</li>
+          <li>BigQuery</li>
+          <li>NoSQL</li>
+          <li>MongoDB</li>
+          <li>NoSQL</li>
+          <li>Excel</li>
+        </ul>
+
+        <h5>
+          Languages
+        </h5>
+        <ul>
+          <li>Spanish (A1)</li>
+          <li>French (A2)</li>
+          <li>English (Native)</li>
+          <li>Vietnamese (Social)</li>
+        </ul>
+        
+        <!-- <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML</span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">PHP <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div> -->
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>Put work experience desc</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Pamela Nguyen</h4>
+              <p><em>Inquisitive and data hungry researcher interested in data analysis and machine learning with 4+ experience. </em></p>
+              <ul>
+                <li>Austin, TX</li>
+                <li>+1 (254) 350-3406</li>
+                <li>cao.nn.p@gmail.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Science in Computational Physics &amp; Mathematics</h4>
+              <h5>2019-2022</h5>
+              <p><em>University of Texas at Austin, Austin, TX</em></p>
+              <li>Certificate in Elements of Computing, Scientific Computation & Data Sciences</li>
+            </div>
+  
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+
+            <div class="resume-item">
+              <h4>Sales Specialist</h4>
+              <h5>June 2022 - Present</h5>
+              <p><em>Apple, Austin, TX </em></p>
+              <ul>
+                <li>Educate customers on Apple devices such as iPhone, iPad, Apple Watch, Mac, and software such as iOS and
+                  MacOS through interactive product test-runs and demonstrations</li>
+                <li>Demonstrate ongoing knowledge of recent technologies through frequent reviewing of training materials</li>
+                <li>Collaborate with leads, technical experts, operations experts and coaches to deliver a seamless experience for
+                  customers</li>
+                <li>Troubleshoot information transfer through iCloud backup, Apple, and Android devices</li>
+                <li>Guide customers through personal device set-up features such as Apple Wallet, Face ID/Touch ID, and
+                  Accessibility display troubleshoot information transfer through iCloud backup, Apple, and Android devices</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Computer Science &amp; Mathematics Instructor</h4>
+              <h5>May 2022 - Present</h5>
+              <p><em>Juni Learning, Remote</em></p>
+              <ul>
+                <li>Execute advanced computer science lesson plans including basic data structures, object-oriented programming, and machine learning algorithms 
+                  over Zoom for students ages 8-18 while adapting to student needs and interests. 
+                  Skills used: Python: Keras, NumPy, SciPy, Scikit-Learn, Java, C++, Scratch</li>
+                <li>Communicate with family members on a regular basis, providing updates and maintaining records on student progress and results from learning assessments.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Undergraduate Researcher &amp; Data Analyst</h4>
+              <h5>Jan 2019 - Dec 2023</h5>
+              <p><em>UT Austin (Molecular Biosciences), Austin, TX </em></p>
+              <ul>
+                <li>Analyze and model C. elegans genomic data (RNA-seq, variant detection) using statistical methods and next-generation sequencing (NGS) platforms on GCP and TACC.
+                </li>
+                <li>Generate and execute computational pipelines using Python, Bash, and R for parsing, visualization, statistical analysis, and other processing of data generated by NGS workflows.
+                </li>
+                <li>Senior Research Thesis: Filtered, sorted, plotted and correlated the effects of rDNA copy number extremities on gene expression and genomic variation of millions of C. elegans records. Used: Python: pandas, NumPy, seaborn
+                </li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Technical Advisor</h4>
+              <h5>Mar 2020 - jan 2021</h5>
+              <p><em>Apple, Austin, TX </em></p>
+              <ul>
+                <li>Knowledgeable in operating and troubleshooting iOS and MacOS devices while remaining up-to-date with the latest technologies and solutions applicable to company products.
+                </li>
+                <li>Consistently exudes professionalism and maintaining privacy when handling customer information while sustaining standard average handle time and customer satisfaction.
+                </li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Undergraduate Researcher &amp; Data Analyst</h4>
+              <h5>June 2019 - Aug 2019</h5>
+              <p><em>UT Austin (Astronomy), Austin, TX </em></p>
+              <ul>
+                <li>Implemented and created Jupyter Notebooks using Python and libraries such as NumPy, Scipy, Sympy and PyTorch to analyze and simulate white dwarf stars data. Such tasks included the creation and calibration of dark and flat frames to calculate aperture photometry.
+                </li>
+                <li>Obtained flat and dark data from the McDonald Observatory with given possible white dwarf star coordinates. Acquired over 4+ days` worth of data. Skills used: Python: NumPy, SciPy, Sympy, PyTorch
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Data Analysis</li>
+              <li data-filter=".filter-card">Electronics</li>
+              <li data-filter=".filter-web">Databases</li>
+              <li data-filter=".filter-hpc">hpc</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXElEQVRIS2NkoDFgpLH5DKMWEAxhkoLoPxCATGQEAoImQxUQrRCkftQCgsE6dIII5lKCXkJTgC11YU1FNLcAl8uHThyM+gA5BAZXWURqvgCXvORoIkXPqAUEQwsAVoQ4Gad6WJkAAAAASUVORK5CYII="/></a>
+                <a href="portfolio-details.html" title="More Details"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjklEQVRIS81Ui23CMBTEG7BB0wnabgAblA3aDWACygSFCUgnKBs0I8AEhAnaDdK76Dl6eXZxrCoSlk7Kx7577862m4w83Mj8k9sUaJpmis5nQAHUQOWc+4m5kd0ByF9A9A5QRI8VRLZWJEsA5EshJ08FHKWLZyEORHIFWPUn8IFqS18thGnXl7zf4x9ta0eWQMxjJbLHM+3rdZEUMIGS76ArVAJrPL8R+L8Z1MGVQLcgWemOMJfWMYsF/h2SAljgK+LcCrCBdiKYS2IKcKs+JTNQ5FxAT0tlxSOeuU1fSSQBk5wboGdPNGS1FTtyyYGkO5Cyk3YYcp6BjT1wvZCF6CzVsMK2cmMXv9VAAdAaVh4lDzpQXnKnLHylIsIOeND0YJfcMeWgq0LZE+wSEaH/M+ABOAG8gzrLjHj7ai3yuyHoILZ4yLdYBt+ycI7qKk8iga7xbT6E2M8JTrK50EpMrIEC8IFGb82/RKNXhRHxa5OBJjPQEyDCqhnoHXABjqlAswRyfL42N3mb/ldodIFfSw2pGeJY+t0AAAAASUVORK5CYII="/></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXElEQVRIS2NkoDFgpLH5DKMWEAxhkoLoPxCATGQEAoImQxUQrRCkftQCgsE6dIII5lKCXkJTgC11YU1FNLcAl8uHThyM+gA5BAZXWURqvgCXvORoIkXPqAUEQwsAVoQ4Gad6WJkAAAAASUVORK5CYII="/></a>
+                <a href="portfolio-details.html" title="More Details"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjklEQVRIS81Ui23CMBTEG7BB0wnabgAblA3aDWACygSFCUgnKBs0I8AEhAnaDdK76Dl6eXZxrCoSlk7Kx7577862m4w83Mj8k9sUaJpmis5nQAHUQOWc+4m5kd0ByF9A9A5QRI8VRLZWJEsA5EshJ08FHKWLZyEORHIFWPUn8IFqS18thGnXl7zf4x9ta0eWQMxjJbLHM+3rdZEUMIGS76ArVAJrPL8R+L8Z1MGVQLcgWemOMJfWMYsF/h2SAljgK+LcCrCBdiKYS2IKcKs+JTNQ5FxAT0tlxSOeuU1fSSQBk5wboGdPNGS1FTtyyYGkO5Cyk3YYcp6BjT1wvZCF6CzVsMK2cmMXv9VAAdAaVh4lDzpQXnKnLHylIsIOeND0YJfcMeWgq0LZE+wSEaH/M+ABOAG8gzrLjHj7ai3yuyHoILZ4yLdYBt+ycI7qKk8iga7xbT6E2M8JTrK50EpMrIEC8IFGb82/RKNXhRHxa5OBJjPQEyDCqhnoHXABjqlAswRyfL42N3mb/ldodIFfSw2pGeJY+t0AAAAASUVORK5CYII="/></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXElEQVRIS2NkoDFgpLH5DKMWEAxhkoLoPxCATGQEAoImQxUQrRCkftQCgsE6dIII5lKCXkJTgC11YU1FNLcAl8uHThyM+gA5BAZXWURqvgCXvORoIkXPqAUEQwsAVoQ4Gad6WJkAAAAASUVORK5CYII="/></a>
+                <a href="portfolio-details.html" title="More Details"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjklEQVRIS81Ui23CMBTEG7BB0wnabgAblA3aDWACygSFCUgnKBs0I8AEhAnaDdK76Dl6eXZxrCoSlk7Kx7577862m4w83Mj8k9sUaJpmis5nQAHUQOWc+4m5kd0ByF9A9A5QRI8VRLZWJEsA5EshJ08FHKWLZyEORHIFWPUn8IFqS18thGnXl7zf4x9ta0eWQMxjJbLHM+3rdZEUMIGS76ArVAJrPL8R+L8Z1MGVQLcgWemOMJfWMYsF/h2SAljgK+LcCrCBdiKYS2IKcKs+JTNQ5FxAT0tlxSOeuU1fSSQBk5wboGdPNGS1FTtyyYGkO5Cyk3YYcp6BjT1wvZCF6CzVsMK2cmMXv9VAAdAaVh4lDzpQXnKnLHylIsIOeND0YJfcMeWgq0LZE+wSEaH/M+ABOAG8gzrLjHj7ai3yuyHoILZ4yLdYBt+ycI7qKk8iga7xbT6E2M8JTrK50EpMrIEC8IFGb82/RKNXhRHxa5OBJjPQEyDCqhnoHXABjqlAswRyfL42N3mb/ldodIFfSw2pGeJY+t0AAAAASUVORK5CYII="/></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXElEQVRIS2NkoDFgpLH5DKMWEAxhkoLoPxCATGQEAoImQxUQrRCkftQCgsE6dIII5lKCXkJTgC11YU1FNLcAl8uHThyM+gA5BAZXWURqvgCXvORoIkXPqAUEQwsAVoQ4Gad6WJkAAAAASUVORK5CYII="/></a>
+                <a href="portfolio-details.html" title="More Details"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjklEQVRIS81Ui23CMBTEG7BB0wnabgAblA3aDWACygSFCUgnKBs0I8AEhAnaDdK76Dl6eXZxrCoSlk7Kx7577862m4w83Mj8k9sUaJpmis5nQAHUQOWc+4m5kd0ByF9A9A5QRI8VRLZWJEsA5EshJ08FHKWLZyEORHIFWPUn8IFqS18thGnXl7zf4x9ta0eWQMxjJbLHM+3rdZEUMIGS76ArVAJrPL8R+L8Z1MGVQLcgWemOMJfWMYsF/h2SAljgK+LcCrCBdiKYS2IKcKs+JTNQ5FxAT0tlxSOeuU1fSSQBk5wboGdPNGS1FTtyyYGkO5Cyk3YYcp6BjT1wvZCF6CzVsMK2cmMXv9VAAdAaVh4lDzpQXnKnLHylIsIOeND0YJfcMeWgq0LZE+wSEaH/M+ABOAG8gzrLjHj7ai3yuyHoILZ4yLdYBt+ycI7qKk8iga7xbT6E2M8JTrK50EpMrIEC8IFGb82/RKNXhRHxa5OBJjPQEyDCqhnoHXABjqlAswRyfL42N3mb/ldodIFfSw2pGeJY+t0AAAAASUVORK5CYII="/></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXElEQVRIS2NkoDFgpLH5DKMWEAxhkoLoPxCATGQEAoImQxUQrRCkftQCgsE6dIII5lKCXkJTgC11YU1FNLcAl8uHThyM+gA5BAZXWURqvgCXvORoIkXPqAUEQwsAVoQ4Gad6WJkAAAAASUVORK5CYII="/></a>
+                <a href="portfolio-details.html" title="More Details"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjklEQVRIS81Ui23CMBTEG7BB0wnabgAblA3aDWACygSFCUgnKBs0I8AEhAnaDdK76Dl6eXZxrCoSlk7Kx7577862m4w83Mj8k9sUaJpmis5nQAHUQOWc+4m5kd0ByF9A9A5QRI8VRLZWJEsA5EshJ08FHKWLZyEORHIFWPUn8IFqS18thGnXl7zf4x9ta0eWQMxjJbLHM+3rdZEUMIGS76ArVAJrPL8R+L8Z1MGVQLcgWemOMJfWMYsF/h2SAljgK+LcCrCBdiKYS2IKcKs+JTNQ5FxAT0tlxSOeuU1fSSQBk5wboGdPNGS1FTtyyYGkO5Cyk3YYcp6BjT1wvZCF6CzVsMK2cmMXv9VAAdAaVh4lDzpQXnKnLHylIsIOeND0YJfcMeWgq0LZE+wSEaH/M+ABOAG8gzrLjHj7ai3yuyHoILZ4yLdYBt+ycI7qKk8iga7xbT6E2M8JTrK50EpMrIEC8IFGb82/RKNXhRHxa5OBJjPQEyDCqhnoHXABjqlAswRyfL42N3mb/ldodIFfSw2pGeJY+t0AAAAASUVORK5CYII="/></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXElEQVRIS2NkoDFgpLH5DKMWEAxhkoLoPxCATGQEAoImQxUQrRCkftQCgsE6dIII5lKCXkJTgC11YU1FNLcAl8uHThyM+gA5BAZXWURqvgCXvORoIkXPqAUEQwsAVoQ4Gad6WJkAAAAASUVORK5CYII="/></a>
+                <a href="portfolio-details.html" title="More Details"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjklEQVRIS81Ui23CMBTEG7BB0wnabgAblA3aDWACygSFCUgnKBs0I8AEhAnaDdK76Dl6eXZxrCoSlk7Kx7577862m4w83Mj8k9sUaJpmis5nQAHUQOWc+4m5kd0ByF9A9A5QRI8VRLZWJEsA5EshJ08FHKWLZyEORHIFWPUn8IFqS18thGnXl7zf4x9ta0eWQMxjJbLHM+3rdZEUMIGS76ArVAJrPL8R+L8Z1MGVQLcgWemOMJfWMYsF/h2SAljgK+LcCrCBdiKYS2IKcKs+JTNQ5FxAT0tlxSOeuU1fSSQBk5wboGdPNGS1FTtyyYGkO5Cyk3YYcp6BjT1wvZCF6CzVsMK2cmMXv9VAAdAaVh4lDzpQXnKnLHylIsIOeND0YJfcMeWgq0LZE+wSEaH/M+ABOAG8gzrLjHj7ai3yuyHoILZ4yLdYBt+ycI7qKk8iga7xbT6E2M8JTrK50EpMrIEC8IFGb82/RKNXhRHxa5OBJjPQEyDCqhnoHXABjqlAswRyfL42N3mb/ldodIFfSw2pGeJY+t0AAAAASUVORK5CYII="/></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXElEQVRIS2NkoDFgpLH5DKMWEAxhkoLoPxCATGQEAoImQxUQrRCkftQCgsE6dIII5lKCXkJTgC11YU1FNLcAl8uHThyM+gA5BAZXWURqvgCXvORoIkXPqAUEQwsAVoQ4Gad6WJkAAAAASUVORK5CYII="/></a>
+                <a href="portfolio-details.html" title="More Details"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjklEQVRIS81Ui23CMBTEG7BB0wnabgAblA3aDWACygSFCUgnKBs0I8AEhAnaDdK76Dl6eXZxrCoSlk7Kx7577862m4w83Mj8k9sUaJpmis5nQAHUQOWc+4m5kd0ByF9A9A5QRI8VRLZWJEsA5EshJ08FHKWLZyEORHIFWPUn8IFqS18thGnXl7zf4x9ta0eWQMxjJbLHM+3rdZEUMIGS76ArVAJrPL8R+L8Z1MGVQLcgWemOMJfWMYsF/h2SAljgK+LcCrCBdiKYS2IKcKs+JTNQ5FxAT0tlxSOeuU1fSSQBk5wboGdPNGS1FTtyyYGkO5Cyk3YYcp6BjT1wvZCF6CzVsMK2cmMXv9VAAdAaVh4lDzpQXnKnLHylIsIOeND0YJfcMeWgq0LZE+wSEaH/M+ABOAG8gzrLjHj7ai3yuyHoILZ4yLdYBt+ycI7qKk8iga7xbT6E2M8JTrK50EpMrIEC8IFGb82/RKNXhRHxa5OBJjPQEyDCqhnoHXABjqlAswRyfL42N3mb/ldodIFfSw2pGeJY+t0AAAAASUVORK5CYII="/></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXElEQVRIS2NkoDFgpLH5DKMWEAxhkoLoPxCATGQEAoImQxUQrRCkftQCgsE6dIII5lKCXkJTgC11YU1FNLcAl8uHThyM+gA5BAZXWURqvgCXvORoIkXPqAUEQwsAVoQ4Gad6WJkAAAAASUVORK5CYII="/></a>
+                <a href="portfolio-details.html" title="More Details"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjklEQVRIS81Ui23CMBTEG7BB0wnabgAblA3aDWACygSFCUgnKBs0I8AEhAnaDdK76Dl6eXZxrCoSlk7Kx7577862m4w83Mj8k9sUaJpmis5nQAHUQOWc+4m5kd0ByF9A9A5QRI8VRLZWJEsA5EshJ08FHKWLZyEORHIFWPUn8IFqS18thGnXl7zf4x9ta0eWQMxjJbLHM+3rdZEUMIGS76ArVAJrPL8R+L8Z1MGVQLcgWemOMJfWMYsF/h2SAljgK+LcCrCBdiKYS2IKcKs+JTNQ5FxAT0tlxSOeuU1fSSQBk5wboGdPNGS1FTtyyYGkO5Cyk3YYcp6BjT1wvZCF6CzVsMK2cmMXv9VAAdAaVh4lDzpQXnKnLHylIsIOeND0YJfcMeWgq0LZE+wSEaH/M+ABOAG8gzrLjHj7ai3yuyHoILZ4yLdYBt+ycI7qKk8iga7xbT6E2M8JTrK50EpMrIEC8IFGb82/RKNXhRHxa5OBJjPQEyDCqhnoHXABjqlAswRyfL42N3mb/ldodIFfSw2pGeJY+t0AAAAASUVORK5CYII="/></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXElEQVRIS2NkoDFgpLH5DKMWEAxhkoLoPxCATGQEAoImQxUQrRCkftQCgsE6dIII5lKCXkJTgC11YU1FNLcAl8uHThyM+gA5BAZXWURqvgCXvORoIkXPqAUEQwsAVoQ4Gad6WJkAAAAASUVORK5CYII="/></a>
+                <a href="portfolio-details.html" title="More Details"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjklEQVRIS81Ui23CMBTEG7BB0wnabgAblA3aDWACygSFCUgnKBs0I8AEhAnaDdK76Dl6eXZxrCoSlk7Kx7577862m4w83Mj8k9sUaJpmis5nQAHUQOWc+4m5kd0ByF9A9A5QRI8VRLZWJEsA5EshJ08FHKWLZyEORHIFWPUn8IFqS18thGnXl7zf4x9ta0eWQMxjJbLHM+3rdZEUMIGS76ArVAJrPL8R+L8Z1MGVQLcgWemOMJfWMYsF/h2SAljgK+LcCrCBdiKYS2IKcKs+JTNQ5FxAT0tlxSOeuU1fSSQBk5wboGdPNGS1FTtyyYGkO5Cyk3YYcp6BjT1wvZCF6CzVsMK2cmMXv9VAAdAaVh4lDzpQXnKnLHylIsIOeND0YJfcMeWgq0LZE+wSEaH/M+ABOAG8gzrLjHj7ai3yuyHoILZ4yLdYBt+ycI7qKk8iga7xbT6E2M8JTrK50EpMrIEC8IFGb82/RKNXhRHxa5OBJjPQEyDCqhnoHXABjqlAswRyfL42N3mb/ldodIFfSw2pGeJY+t0AAAAASUVORK5CYII="/></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="purecounter_vanilla.js"></script>
+  <script src="aos.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="glightbox.min.js"></script>
+  <script src="isotope.pkgd.min.js"></script>
+  <script src="swiper-bundle.min.js"></script>
+  <script src="typed.min.js"></script>
+  <script src="noframework.waypoints.js"></script>
+  <script src="validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
